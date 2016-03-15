@@ -1,0 +1,9 @@
+{
+	"libs":[
+		"browser",
+		"angular"
+	], 
+	"plugins": {
+		"node": {}
+	}
+}

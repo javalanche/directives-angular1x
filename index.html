@@ -1,0 +1,21 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+<script src="./app/app.js"></script>
+<script src="./app/bootstrap.js"></script>
+<script src="./app/controller.js"></script>
+</head>
+<!--<body ng-controller="Demo">-->
+<body>
+	Name: <input type="text" name="name" id="name" value="name" ng-model="name">
+
+	<div>
+		Hello <span ng-bind="name"></span>
+	</div>
+
+	<ul>
+		<li ng-repeat="i in [1,2,3]">{{i}}</li>
+	</ul>
+
+</body>
+</html>
