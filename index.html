@@ -5,8 +5,9 @@
 <script src="./app/bootstrap.js"></script>
 <script src="./app/controller.js"></script>
 </head>
-<!--<body ng-controller="Demo">-->
-<body>
+<body ng-controller="Demo">
+	<!--first-step-->
+	<p>First Step</p>
 	Name: <input type="text" name="name" id="name" value="name" ng-model="name">
 
 	<div>
@@ -16,6 +17,12 @@
 	<ul>
 		<li ng-repeat="i in [1,2,3]">{{i}}</li>
 	</ul>
-
+	<hr>
+	<!--second-step-->
+	<p>Second Step</p>
+	<pre>
+		name=={{name}}
+		leak=={{leak}}
+	</pre>
 </body>
 </html>
