@@ -4,6 +4,7 @@
 <script src="./app/app.js"></script>
 <script src="./app/bootstrap.js"></script>
 <script src="./app/controller.js"></script>
+<script src="./app/directives.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body ng-controller="Demo">
 	<!--first-step-->
@@ -18,11 +19,79 @@
 		<li ng-repeat="i in [1,2,3]">{{i}}</li>
 	</ul>
 	<hr>
-	<!--second-step-->
-	<h1>Second Step</h1>
-	<pre>
-		name=={{name}}
-		leak=={{leak}}
-	</pre>
+	<!--
+		 -second-step
+		 -->
+		 <h1>Second Step</h1>
+		 <h2>make sure you look at console</h2>
+		 <h3> compile and link function each run once and are the same </h3>
+		 <div demo-greet-two></div>
+		 <h3> compile is run once but link twice</h3>
+		 <div demo-greet-two ng-repeat="i in [1,0]"></div>
+		 <pre>
+		 	name=={{name}}
+		 	leak=={{leak}}
+		 </pre>
+		 <hr>
+	<!--
+		 -third step 
+		 -->
+		 <h1>Third Step</h1>
+		 <h3>this works the first time but if you try to enter more text doesn't update</h3>
+		 <div demo-greet-three ng-repeat="i in [1,0]"></div>
+		 <hr>
+	<!--
+		 -fourth step 
+		 -->
+		 <h1>Fourth Step</h1>
+		 Name: <input type="text" name="name" id="name" value="name" ng-model="name">
+		 <h3>this is with a $watch</h3>
+		 <h3>this is our own custom binding</h3>
+		 <div demo-greet-four ng-repeat="i in [1,0]"></div>
+		 <hr>
+	<!--
+		 fifth step 
+		 -->
+		 <h1>Fifth Step</h1>
+		 nombre: <input type="text" nombre="nombre" id="nombre" value="nombre" ng-model="nombre">
+		 <h3>this lets you pass the variable on scope to watch instead hardcoding in directive</h3>
+		 <div demo-greet-five="nombre" ng-repeat="i in [1,0]"></div>
+		 <hr>
+	<!--
+		 sixth step 
+		 -->
+		 <h1>Sixth Step</h1>
+		 <h3>click on this guy and look at console</h3>
+		 <h3>there is an angular world and non-angular world</h3>
+		 <div demo-greet-six="name"></div>
+		 <hr>
+	<!--
+		 seventh step 
+		 -->
+		 <h1>seventh Step</h1>
+		 <h3>click on this guy and look at console</h3>
+		 <h3>this is with $apply()</h3>
+		 <h3>but what if thru exception?</h3>
+		 <div demo-greet-seven="name"></div>
+		 <hr>
+	<!--
+		 eight step 
+		 -->
+		 <h1>eight Step</h1>
+		 <h3>click on this guy and look at console</h3>
+		 <h3>this is with $apply()</h3>
+		 <h3>would be ok if name thru exception</h3>
+		 <div demo-greet-eight="name"></div>
+		 <hr>
+	<!--
+		 nine step 
+		 -->
+		 <h1>this one is still pending start @ 24:11</h1>
+		 <h1>nine Step</h1>
+		 <h3>click on this guy and look at console</h3>
+		 <h3>this is with $apply()</h3>
+		 <h3>would be ok if name thru exception</h3>
+		 <div demo-greet-nine="name"></div>
+		 <hr>
 </body>
 </html>
